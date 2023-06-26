@@ -1,0 +1,15 @@
+<div class="signin">
+  <h1>Sign In</h1>
+  <form id="signInForm" action="/signin" method="post">
+    <div>
+      <label for="username">Username:</label>
+      <input type="text" name="username" placeholder="Username" required>
+    </div>
+    <div>
+      <label for="password">Password:</label>
+      <input type="password" name="password" placeholder="Password" required>
+    </div>
+    <input type="submit" value="Sign In">
+    <p class="signInMessage">{{errorMessage}}</p>
+  </form>
+</div>

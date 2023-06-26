@@ -1,0 +1,44 @@
+<div id="home-heading">
+<h1 id="home-title">Open Library Bookcase</h1>
+    <div class="signout">
+        <a href="/signout">Sign Out</a>
+    </div>
+</div>
+<div class="home">
+  <div class="home-left">
+    <h2>Available Books</h2>
+    <form id="borrowForm" action="/borrow" method="post">
+      <label><input type="checkbox" name="book1" value="1"> How to cook for Dummies</label><br>
+      <label><input type="checkbox" name="book2" value="2"> The History of Spain</label><br>
+	  <label><input type="checkbox" name="book3" value="3"> Canadian Economics 101</label><br>
+	  <label><input type="checkbox" name="book4" value="4"> A Guide to Gardening</label><br>
+      <label><input type="checkbox" name="book5" value="5"> Understanding Astrophysics</label><br>
+	  <label><input type="checkbox" name="book6" value="6"> Learning to Blend: A Blender guide</label><br>
+      <label><input type="checkbox" name="book7" value="7"> The World of Philosophy</label><br>
+      <label><input type="checkbox" name="book8" value="8"> Secrets of a Happy Life</label><br>
+	  <label><input type="checkbox" name="book9" value="9"> Modern Architecture Explained</label><br>
+      <label><input type="checkbox" name="book10" value="10"> Mastering the Art of Negotiation</label><br>
+
+	  
+	  
+      <input type="submit" value="Borrow">
+    </form>
+  </div>
+  <div class="home-right">
+    <p>Signed in as {{email}}</p>
+  </div>
+  <script>
+  document.getElementById("borrowForm").addEventListener("submit", function(event) {
+    const checkboxes = document.querySelectorAll("input[type='checkbox']");
+    let checked = false;
+    checkboxes.forEach(checkbox => {
+      if (checkbox.checked) checked = true;
+    });
+    if (!checked) {
+      event.preventDefault();
+      alert("No books selected, please select at least one book.");
+    }
+  });
+</script>
+
+</div>
