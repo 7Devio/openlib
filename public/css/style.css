@@ -111,6 +111,10 @@ a:hover {
 }
 
 .home-right{
+  text-align: left;
+}
+
+#signed-in-username{
   text-align: right;
 }
 
